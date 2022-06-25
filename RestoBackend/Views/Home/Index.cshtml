@@ -1,0 +1,534 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+  <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="home d-flex">
+
+                        <div class="col-lg-6">
+                         <div class="page-intro">
+                            <h3>@Html.Raw(Model.sliders.Title)</h3>
+                         </div>
+                         <div class="intro-button">
+                            <button type="button" class="btn btn-danger intro-btn">Explore Menu</button>
+                                <a  class="play-video" href="">   <i class="fa-brands fa-youtube"></i>Play Video</a>
+                         </div>
+                       
+                         <div class="home-design d-flex mt-10">
+                            <div class="icon-intro">
+                                <i class="fa-solid fa-rocket"></i>
+                                <p>
+                                    Fast Deliover
+                                </p>
+                            </div>
+                            <div class="icon-intro">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                                <p>
+                                    Fast Deliover
+                                </p>
+                            </div>
+                            <div class="icon-intro">
+                                <i class="fa-solid fa-circle-question"></i>
+                                <p>
+                                    Fast Deliover
+                                </p>
+                            </div>
+                         </div>
+                      
+                         
+                        </div>
+                        <div class="col-6">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner slider">
+                                  <div class="carousel-item active">
+                                    <img src="~/assets/img/hero-1.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="~/assets/img/hero-2.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="~/assets/img/hero-3.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                              </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="home d-flex">
+                        <div class="col-6">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner slider">
+                                  <div class="carousel-item active">
+                                    <img src="~/assets/img/hero-2.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                 
+                               
+                              </div>
+                        </div>
+
+                      
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-intro">
+                           <p>@Model.abouts.SubTitle<p>
+                             
+                            <h4>
+                                @Model.abouts.Title
+                            </h4>
+                            <param>@Model.abouts.Desc </param>
+                      
+                      
+                        <h4>
+                            Special Recipe
+                        </h4>
+                        <div class="home-design d-flex ">
+                         
+                            @foreach (var item in Model.specialRecipes)
+                           {
+                                      <div class="hero-image ">
+                            <img style="width:150px;" src="~/assets/img/@item.Image" alt="">
+                            <div class="hero-text">
+                                <a>@item.Title</a>
+                            </div>
+                           </div>
+                           }
+                        
+                        </div>
+                     
+                        
+                       </div>
+
+                   
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-12  d-flex">
+                        <div class="special-text">
+                            <p>Specialties</p>
+                            <h3> Special Dishes</h3>
+                        </div>
+                    </div>
+                    <div class="special d-flex">    
+
+                        <div class="col-6">
+                         <div class="special-intro">
+                            <h1>01. _________</h1>
+                            <h4>Beef</h4>
+                            <h5>Steak Sauce</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. Cupiditate, ea vero alias<br> perferendis quas animi doloribus voluptates.<br> Atque explicabo ea nesciunt provident libero qui <br>eum, corporis esse quos excepturi soluta?</p>
+                            <h3>$15.00</h3>
+                         </div>
+                         <div class="intro-button">
+                            <button type="button" class="btn btn-danger intro-btn">Book A Table</button>
+                         </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner slider">
+                                  <div class="carousel-item active">
+                                    <img src="~/assets/img/steak.jpg" class="d-block w-100" style="width: 80px;" alt="...">
+                                  </div>
+                              </div>
+                        </div>
+                    </div>
+                    
+                    
+            
+                </div>
+                <div class="special d-flex">    
+                    <div class="col-6">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner slider">
+                              <div class="carousel-item active">
+                                <img src="~/assets/img/salmon-zucchini.jpg" class="d-block w-100" style="width: 80px;" alt="...">
+                              </div>
+                             
+                          </div>
+                    </div>
+                
+                </div>
+                <div class="col-6">
+                    <div class="special-intro">
+                       <h1>02. _________</h1>
+                       <h4>Salmon</h4>
+                       <h5>Zucchini</h5>
+                       <p>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. Cupiditate, ea vero alias<br> perferendis quas animi doloribus voluptates.<br> Atque explicabo ea nesciunt provident libero qui <br>eum, corporis esse quos excepturi soluta?</p>
+                       <h3>$12.00</h3>
+                    </div>
+                    <div class="intro-button">
+                       <button type="button" class="btn btn-danger intro-btn">Book A Table</button>
+                    </div>
+                   </div>
+               
+                
+                
+            </div>
+            </div>
+        </section>
+
+        
+         <section>
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-12  d-flex">
+                            <div class="special-text">
+                                <p>Specialties</p>
+                                <h3> Our Menu</h3>
+                            </div>
+                        </div>
+
+                       @foreach (var item in Model.menus)
+                      {
+                           <div class="col-4">
+                            <h3>Breakfast</h3>
+                            <div class="fast-info">
+                                <img src="~/assets/img/@item.Image" alt="">  
+                                <p>@item.SubTitle</p>
+                                <p>@item.Title</p>
+                                <h5>$@item.Price</h5>
+                                
+                            </div>
+                         
+                        </div>
+                      }
+        </section>
+
+     @* <section class="ourmenu">
+            <div class="ourmenu-title">
+                        <span class="text-danger">Specialties</span>
+                        <h2>Our Menu</h2>
+                </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="breakfast">
+                                    <h3>Breakfast</h3>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="breakfast">
+                                    <h3>Breakfast</h3>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="breakfast">
+                                    <h3>Breakfast</h3>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sandwich">
+                                    <div class="row">
+                                        <div class="col-2 egg-photo">
+                                            <img src="./assets/img/breakfast-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <h4>
+                                                    Egg Sandwich
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    Meat Ball,Mie
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>
+                                                $30
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                    
+            </div>
+        </section>*@
+
+        <!-- <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators ">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active slider-btn" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                </div>
+                <div class="carousel-inner slider-2">
+                  <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="~/assets/img/testi-bg.jpg" class="d-block w-100  " alt="...">
+                    <div class="carousel-caption slider2-text d-none d-md-block">
+                        <p>Testimony</p>
+                      <h5>Happy Customer</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt distinctio corrupti enim quod debitis sint rem nisi quidem! Alias in voluptatem deserunt consequatur ex doloremque quas ipsa quia reiciendis similique..</p>
+                      <p>John Doe</p>
+                       Ceo of<p>SiteMan</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="~/assets/img/testi-bg.jpg" class="d-block w-100 " alt="...">
+                    <div class="carousel-caption slider2-text d-none d-md-block">
+                        <p>Testimony</p>
+                      <h5>Happy Customer</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt distinctio corrupti enim quod debitis sint rem nisi quidem! Alias in voluptatem deserunt consequatur ex doloremque quas ipsa quia reiciendis similique..</p>
+                      <p>John Doe</p>
+                       Ceo of<p>SiteMan</p>
+                    </div>
+                  </div>
+                 
+                </div>
+                  
+                 
+           
+              </div>
+        </section> -->
+    
+    <section>
+        <div class="container">
+            <div class="row">
+                    <div class="col-12  d-flex">
+                        <div class="special-text">
+                            <p>Specialties</p>
+                            <h3> Our Team</h3>
+                        </div>
+                </div>
+
+              @foreach (var item in Model.teams)
+             {
+                   <div class="col-4">
+                    <div class="team-img">
+                        <img src="~/assets/img/@item.Image" alt="">
+                        <div class="team-desc">
+                            <h4>@item.Author</h4>
+                            <p>@item.Profession</p>
+                        </div>
+                    </div>
+                </div>
+             }
+               
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="image-soon">
+            <img src="~/assets/img/reservation-bg.jpg" style="width: 100%;" alt="">
+        </div>
+    </section>
+    </main>
